@@ -24,3 +24,12 @@ function operacion() {
   alert('el reultado de la division es: '+resultado)
 
 }
+function operacionFor() {
+  numeroUno = prompt ('introduce un numero');
+  resultado = "";
+  for (var i = 0; i <= 10; i++) {
+    resultacito = parseInt(numeroUno) * i;
+    resultado =resultado + i +" x "+numeroUno+" = "+resultacito+'\n';
+  }
+  alert(resultado)
+}
