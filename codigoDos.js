@@ -22,10 +22,62 @@ function multiplo() {
     document.write(resultado)
   }
   }
+  function nombre() {
+    var dni = prompt ('introduce tu numero');
+    var tamano=dni.length;
+    alert(tamano);
+    var consonante=0;
+    var vocales=0;
+    var a=0;
+    var e=0;
+    var ies=0;
+    var o=0;
+    var u=0;
+    dni=dni.toLocaleUpperCase();
+    dni=dni.replace("Á","A");
+    dni=dni.replace("É","E");
+    dni=dni.replace("Ú","U");
+    dni=dni.replace("Ó","O");
+    dni=dni.replace("Í","I");
+    for (var i = 0; i < dni.length; i++) {
+      if (dni[i]=="A") {
+        a++;
+      }
+      if (dni[i]=="E") {
+        e++;
+      }
+      if (dni[i]=="I") {
+        ies++;
+      }
+      if (dni[i]=="O") {
+        o++;
+      }
+      if (dni[i]=="U") {
+        u++;
+      }
+      if (dni[i]=="A"||dni[i]=="E"||dni[i]=="O"||dni[i]=="I"||dni[i]=="U") {
+        vocales++;
+      }else {
+        consonante++;
+      }
+      if (dni[i]==" ") {
+        consonante--;
+      }
+    }
+    alert("El numero de a es :"+a);
+    alert("El numero de e e:"+e);
+    alert("El numero de es i:"+ies);
+    alert("El numero de es o:"+o);
+    alert("El numero de es u:"+u);
+
+    alert("El numero de consonantes son : "+consonante);
+    alert("El numero de vocales son :"+vocales);
+
+  }
   function calculadora() {
     //alert("llego")
     var caracter =""
-    while(caracter!="x"){
+
       simbolo = prompt ('introduce un simbolo o x para finalizar');
       switch(simbolo) {
             case "+":
@@ -38,7 +90,7 @@ function multiplo() {
                       numeroUno = prompt ('introduce un numero');
                       numeroDos = prompt ('introduce un numero');
                       resultado = parseInt(numeroUno) - parseInt(numeroDos);
-                      document.write(resultado);
+                      document.write(resultado+'<script type="text/javascript">setTimeout(calculadora(), 3000);</script>');
                   break;
             case "*":
                   numeroUno = prompt ('introduce un numero');
@@ -60,6 +112,6 @@ function multiplo() {
 
 
         }
-    }
+
 
   }
