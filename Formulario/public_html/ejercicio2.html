@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="ejercicio2.js"></script>
+    </head>
+    <body>
+        <form>
+            <label for="usuarioPrueba">Nombre</label>
+            <input type="text"  id="usuario" name="usuario" placeholder="Nombre">
+            <br>
+            <label for="usuarioPrueba">Apellido</label>
+            <input type="text"  id="apellido" name="apellido">
+            <br>
+            <label for="usuarioPrueba">edad</label>
+            <input type="text"  id="edad" name="dni">
+            <br>
+            <input type="submit" value="Enviar">
+            <input type="reset"  value="Cancelar">
+            <input type="button" onclick="guadarUsuario()" value="Añadir usuario">
+            <input type="button" onclick="mostrarUsuario()" value="Mostrar usuario">
+
+        </form>
+         <div id="usuaritos">
+
+        </div>
+    </body>
+</html>

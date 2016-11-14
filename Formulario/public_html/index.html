@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="jquery-3.1.1.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                alert("llego");
+            });
+            var arrayUsuario = new Array();
+            function Usuario(nombre,apellido,dni) {
+                this.nombre = nombre;
+                this.apellido = apellido;
+                this.dni = dni;
+
+            }
+
+            function guadarUsuario() {
+                var usuario = new Usuario($('#usuario').val(),$('#apellido').val(),$('#dni').val());
+               arrayUsuario.push(usuario);
+            }
+            function  mostrarUsuario(){
+                $.each(arrayUsuario, function (ind, elem) { 
+                    //alert(elem.nombre);
+                     $("#usuaritos").append("<p>nombre:"+elem.nombre+"</p>");
+                      $("#usuaritos").append("<p>apellido:"+elem.apellido+"</p>");
+                       $("#usuaritos").append("<p>dni:"+elem.dni+"</p>");
+               });
+                
+            }
+
+        </script>
+
+    </head>
+    <body>
+        <div>TODO write content</div>
+        <form>
+            <label for="usuarioPrueba">Nombre</label>
+            <input type="text"  id="usuario" name="usuario" placeholder="Nombre">
+            <br>
+            <label for="usuarioPrueba">Apellido</label>
+            <input type="text"  id="apellido" name="apellido">
+            <br>
+            <label for="usuarioPrueba">DNI</label>
+            <input type="text"  id="dni" name="dni">
+            <br>
+            <input type="submit" value="Enviar">
+            <input type="reset"  value="Cancelar">
+            <input type="button" onclick="guadarUsuario()" value="Añadir usuario">
+            <input type="button" onclick="mostrarUsuario()" value="Mostrar usuario">
+
+        </form>
+        <div id="usuaritos">
+
+        </div>
+    </body>
+</html>
