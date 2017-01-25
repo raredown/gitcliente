@@ -14,7 +14,6 @@ function Usuario(nombre, apellido, edad) {
 function guadarUsuario() {
     var usuario = new Usuario(document.getElementById("usuario").value, document.getElementById("apellido").value, document.getElementById("edad").value);
     arrayUsuario.push(usuario);
-    
 }
 function  mostrarUsuario() {
   //  alert("llego");

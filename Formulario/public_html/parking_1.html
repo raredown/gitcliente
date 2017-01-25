@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--
+    Formulario -> Marca, Modelo, Matricula, radios Gasolina-Diesel. Enviar, Cancelar, Añadir y Eliminar
+    El parking tiene una capacidad de 12 vehículos. Prompt pidiéndonos el coche a eliminar
+    Matrícula 4 dígitos números, espacio en blanco, y 3 letras. XXXX YYY
+-->
+<html>
+    <head>
+        <title>Parking</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="parking_1.js"></script>
+        <link rel="stylesheet" href="estilo.css" />
+    </head>
+    <body>
+        <div id="contenedor">
+            <form name="formulario" onsubmit="return aniadirVehiculo();">
+                <ul>
+                    <li><label>Marca</label>&nbsp;<input type="text" name="marca" required pattern="[A-Za-z -]+"/></li>
+                    <li><label>Modelo</label>&nbsp;<input type="text" name="modelo" required pattern="[A-Za-z -]+"/></li>
+                    <li><label>Matrícula</label>&nbsp;<input type="text" name="matricula" pattern="^\d{4}\s[A-Z]{3}$" required/></li>
+                    <li><input type="radio" name="motor" value="Diesel" checked />&nbsp;Diesel<input type="radio" name="motor" value="Gasolina"/>&nbsp;Gasolina</li>
+                </ul>
+                <p><input type="submit" name="enviar" value="Enviar" /><input type="reset" name="calcelar" value="Cancelar" /><input type="button" name="aniadir" value="Añadir" onclick="aniadirVehiculo()" /><input type="button" name="mostrar" value="Mostrar" onclick="mostrarVehiculo()" /><input type="button" name="eliminar" value="Eliminar" onclick="eliminarVehiculos()" /></p>
+            </form>
+        </div>
+        
+        <div id="mostrar">
+            
+        </div>
+    </body>
+</html>
